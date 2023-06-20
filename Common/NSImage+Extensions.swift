@@ -23,7 +23,7 @@ extension NSImage {
                 }
                 return
             }
-            guard let windows = try? JSONDecoder().decode(ScreenCapture.Windows.self, from: jsonData) else {
+            guard let windows = try? JSONDecoder().decode([Window].self, from: jsonData) else {
                 print("Could not decode data into Windows onject")
                 DispatchQueue.main.async {
                     completion([])
@@ -31,7 +31,7 @@ extension NSImage {
                 return
             }
 
-            let windowsWithPicture: [ScreenCapture.Window] = windows
+            let windowsWithPicture: [Window] = windows
                 .filter { $0.kCGWindowOwnerName == "Dock" }
                 .compactMap { $0.kCGWindowName == nil ? nil : $0 }
                 .filter { $0.kCGWindowName!.contains("Picture") }

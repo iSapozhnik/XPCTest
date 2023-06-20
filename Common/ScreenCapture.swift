@@ -7,12 +7,8 @@
 
 import Foundation
 
-enum ScreenCapture {
-    typealias Windows = [Window]
-
-    struct Window: Codable {
-        let kCGWindowNumber: Int
-        let kCGWindowOwnerName: String
-        let kCGWindowName: String?
-    }
+struct Window: Codable {
+    let kCGWindowNumber: Int
+    let kCGWindowOwnerName: String
+    let kCGWindowName: String?
 }
