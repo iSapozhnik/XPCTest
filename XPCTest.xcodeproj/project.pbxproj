@@ -11,7 +11,39 @@
 		FFF6DCDB2A42327900E2F70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCDA2A42327900E2F70C /* ViewController.swift */; };
 		FFF6DCDD2A42327A00E2F70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF6DCDC2A42327A00E2F70C /* Assets.xcassets */; };
 		FFF6DCE02A42327A00E2F70C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF6DCDE2A42327A00E2F70C /* Main.storyboard */; };
+		FFF6DCEF2A42334000E2F70C /* WindowInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCEE2A42334000E2F70C /* WindowInfoProtocol.swift */; };
+		FFF6DCF12A42334000E2F70C /* WindowInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCF02A42334000E2F70C /* WindowInfo.swift */; };
+		FFF6DCF32A42334000E2F70C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCF22A42334000E2F70C /* main.swift */; };
+		FFF6DCF72A42334000E2F70C /* WindowInfo.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = FFF6DCEC2A42334000E2F70C /* WindowInfo.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFF6DCFD2A42335200E2F70C /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCFC2A42335200E2F70C /* ScreenCapture.swift */; };
+		FFF6DCFE2A42335200E2F70C /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCFC2A42335200E2F70C /* ScreenCapture.swift */; };
+		FFF6DD002A42339300E2F70C /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCFF2A42339300E2F70C /* NSImage+Extensions.swift */; };
+		FFF6DD012A42339300E2F70C /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6DCFF2A42339300E2F70C /* NSImage+Extensions.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFF6DCF52A42334000E2F70C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFF6DCCD2A42327900E2F70C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFF6DCEB2A42334000E2F70C;
+			remoteInfo = WindowInfo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFF6DCFB2A42334000E2F70C /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				FFF6DCF72A42334000E2F70C /* WindowInfo.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FFF6DCD52A42327900E2F70C /* XPCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +52,24 @@
 		FFF6DCDC2A42327A00E2F70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFF6DCDF2A42327A00E2F70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFF6DCE12A42327A00E2F70C /* XPCTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCTest.entitlements; sourceTree = "<group>"; };
+		FFF6DCEC2A42334000E2F70C /* WindowInfo.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = WindowInfo.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF6DCEE2A42334000E2F70C /* WindowInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowInfoProtocol.swift; sourceTree = "<group>"; };
+		FFF6DCF02A42334000E2F70C /* WindowInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowInfo.swift; sourceTree = "<group>"; };
+		FFF6DCF22A42334000E2F70C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FFF6DCF42A42334000E2F70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF6DCFC2A42335200E2F70C /* ScreenCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapture.swift; sourceTree = "<group>"; };
+		FFF6DCFF2A42339300E2F70C /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FFF6DCD22A42327900E2F70C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF6DCE92A42334000E2F70C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,7 +82,9 @@
 		FFF6DCCC2A42327900E2F70C = {
 			isa = PBXGroup;
 			children = (
+				FFF6DCE72A4232FD00E2F70C /* Common */,
 				FFF6DCD72A42327900E2F70C /* XPCTest */,
+				FFF6DCED2A42334000E2F70C /* WindowInfo */,
 				FFF6DCD62A42327900E2F70C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF6DCD52A42327900E2F70C /* XPCTest.app */,
+				FFF6DCEC2A42334000E2F70C /* WindowInfo.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +110,26 @@
 			path = XPCTest;
 			sourceTree = "<group>";
 		};
+		FFF6DCE72A4232FD00E2F70C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FFF6DCFC2A42335200E2F70C /* ScreenCapture.swift */,
+				FFF6DCFF2A42339300E2F70C /* NSImage+Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FFF6DCED2A42334000E2F70C /* WindowInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FFF6DCEE2A42334000E2F70C /* WindowInfoProtocol.swift */,
+				FFF6DCF02A42334000E2F70C /* WindowInfo.swift */,
+				FFF6DCF22A42334000E2F70C /* main.swift */,
+				FFF6DCF42A42334000E2F70C /* Info.plist */,
+			);
+			path = WindowInfo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,15 +140,34 @@
 				FFF6DCD12A42327900E2F70C /* Sources */,
 				FFF6DCD22A42327900E2F70C /* Frameworks */,
 				FFF6DCD32A42327900E2F70C /* Resources */,
+				FFF6DCFB2A42334000E2F70C /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FFF6DCF62A42334000E2F70C /* PBXTargetDependency */,
 			);
 			name = XPCTest;
 			productName = XPCTest;
 			productReference = FFF6DCD52A42327900E2F70C /* XPCTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FFF6DCEB2A42334000E2F70C /* WindowInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF6DCF82A42334000E2F70C /* Build configuration list for PBXNativeTarget "WindowInfo" */;
+			buildPhases = (
+				FFF6DCE82A42334000E2F70C /* Sources */,
+				FFF6DCE92A42334000E2F70C /* Frameworks */,
+				FFF6DCEA2A42334000E2F70C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WindowInfo;
+			productName = WindowInfo;
+			productReference = FFF6DCEC2A42334000E2F70C /* WindowInfo.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +180,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					FFF6DCD42A42327900E2F70C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FFF6DCEB2A42334000E2F70C = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -110,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				FFF6DCD42A42327900E2F70C /* XPCTest */,
+				FFF6DCEB2A42334000E2F70C /* WindowInfo */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +216,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFF6DCEA2A42334000E2F70C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,11 +231,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF6DCDB2A42327900E2F70C /* ViewController.swift in Sources */,
+				FFF6DCFD2A42335200E2F70C /* ScreenCapture.swift in Sources */,
+				FFF6DD002A42339300E2F70C /* NSImage+Extensions.swift in Sources */,
 				FFF6DCD92A42327900E2F70C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFF6DCE82A42334000E2F70C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF6DCEF2A42334000E2F70C /* WindowInfoProtocol.swift in Sources */,
+				FFF6DCF12A42334000E2F70C /* WindowInfo.swift in Sources */,
+				FFF6DCFE2A42335200E2F70C /* ScreenCapture.swift in Sources */,
+				FFF6DD012A42339300E2F70C /* NSImage+Extensions.swift in Sources */,
+				FFF6DCF32A42334000E2F70C /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFF6DCF62A42334000E2F70C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFF6DCEB2A42334000E2F70C /* WindowInfo */;
+			targetProxy = FFF6DCF52A42334000E2F70C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FFF6DCDE2A42327A00E2F70C /* Main.storyboard */ = {
@@ -266,6 +387,7 @@
 		FFF6DCE52A42327A00E2F70C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XPCTest/XPCTest.entitlements;
@@ -293,6 +415,7 @@
 		FFF6DCE62A42327A00E2F70C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XPCTest/XPCTest.entitlements;
@@ -317,6 +440,48 @@
 			};
 			name = Release;
 		};
+		FFF6DCF92A42334000E2F70C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54HW5825ZV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WindowInfo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WindowInfo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heavylightapps.WindowInfo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FFF6DCFA2A42334000E2F70C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54HW5825ZV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WindowInfo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WindowInfo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heavylightapps.WindowInfo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +499,15 @@
 			buildConfigurations = (
 				FFF6DCE52A42327A00E2F70C /* Debug */,
 				FFF6DCE62A42327A00E2F70C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF6DCF82A42334000E2F70C /* Build configuration list for PBXNativeTarget "WindowInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF6DCF92A42334000E2F70C /* Debug */,
+				FFF6DCFA2A42334000E2F70C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
