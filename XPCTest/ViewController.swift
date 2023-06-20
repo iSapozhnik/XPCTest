@@ -9,6 +9,12 @@ import Cocoa
 import WindowInfo
 
 class ViewController: NSViewController {
+    private let xpc: WindowInfoProtocol? = {
+        let connectionToService = NSXPCConnection(serviceName: "com.heavylightapps.WindowInfo")
+        connectionToService.remoteObjectInterface = NSXPCInterface(with: WindowInfoProtocol.self)
+        connectionToService.resume()
+        return connectionToService.remoteObjectProxy as? WindowInfoProtocol
+    }()
     
     @IBAction func onNormal(_ sender: Any) {
         guard askForAccessibilityIfNeeded() else { return }
@@ -21,14 +27,8 @@ class ViewController: NSViewController {
     @IBAction func onXPC(_ sender: Any) {
         guard askForAccessibilityIfNeeded() else { return }
         
-        let connectionToService = NSXPCConnection(serviceName: "com.heavylightapps.WindowInfo")
-        connectionToService.remoteObjectInterface = NSXPCInterface(with: WindowInfoProtocol.self)
-        connectionToService.resume()
-
-        if let proxy = connectionToService.remoteObjectProxy as? WindowInfoProtocol {
-            proxy.windowInfo { windowNames in
-                print("XPC Window names: \(windowNames)")
-            }
+        xpc?.windowInfo { windowNames in
+            print("XPC Window names: \(windowNames)")
         }
     }
     
